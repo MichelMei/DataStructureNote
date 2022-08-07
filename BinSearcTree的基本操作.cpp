@@ -10,8 +10,8 @@ struct TNode {
     BinTree Right;
 };
 
-void PreorderTraversal(BinTree BT); /* ÏÈĞò±éÀú£¬ÓÉ²ÃÅĞÊµÏÖ£¬Ï¸½Ú²»±í */
-void InorderTraversal(BinTree BT);  /* ÖĞĞò±éÀú£¬ÓÉ²ÃÅĞÊµÏÖ£¬Ï¸½Ú²»±í */
+//void PreorderTraversal(BinTree BT); //å…ˆåºéå†å’Œä¸­åºéå†å‡½æ•°è§ä¸“é—¨çš„éå†ç®—æ³•æ–‡ä»¶
+//void InorderTraversal(BinTree BT);  //æ­¤å¤„åªå†™äº†å‡½æ•°å£°æ˜
 
 BinTree Insert(BinTree BST, ElementType X);
 BinTree Delete(BinTree BST, ElementType X);
@@ -31,7 +31,7 @@ int main()
         scanf("%d", &X);
         BST = Insert(BST, X);
     }
-    printf("Preorder:"); PreorderTraversal(BST); printf("\n");
+    //printf("Preorder:"); PreorderTraversal(BST); printf("\n");
     MinP = FindMin(BST);
     MaxP = FindMax(BST);
     scanf("%d", &N);
@@ -50,11 +50,11 @@ int main()
         scanf("%d", &X);
         BST = Delete(BST, X);
     }
-    printf("Inorder:"); InorderTraversal(BST); printf("\n");
+    //printf("Inorder:"); InorderTraversal(BST); printf("\n");
 
     return 0;
 }
-/* ÄãµÄ´úÂë½«±»Ç¶ÔÚÕâÀï */
+
 BinTree Insert(BinTree BST, ElementType X)
 {
     if (!BST)
