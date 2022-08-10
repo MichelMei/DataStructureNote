@@ -98,7 +98,6 @@ AVLTree Insert(AVLTree T, int X)
 			}
 		}
 	}
-	//X 与 T相等,无需插入
 	return T;
 }
 
