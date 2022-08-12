@@ -22,13 +22,13 @@ struct Node
 typedef struct QNode Queue;
 struct QNode
 {
-	Position front, rear;//Ö¸ÏòÍ·ºÍÎ²£¬Í·²¿¿ÉÉ¾³ý£¬Î²²¿¿ÉÔö¼Ó
+	Position front, rear;//æŒ‡å‘å¤´å’Œå°¾ï¼Œå¤´éƒ¨å¯åˆ é™¤ï¼Œå°¾éƒ¨å¯å¢žåŠ 
 	int maxsize;
 };
 
 
-//µÝ¹éµ÷ÓÃµÄ±éÀúÄ£Ê½
-void PreOrderTravseral(Bintree BT)//Ç°Ðò±éÀú
+//é€’å½’è°ƒç”¨çš„éåŽ†æ¨¡å¼
+void PreOrderTravseral(Bintree BT)//å‰åºéåŽ†
 {
 	if (BT)
 	{
@@ -41,17 +41,17 @@ void InOrderTravseral(Bintree BT)
 {
 	if (BT)
 	{
-		PreOrderTravseral(BT->left);
+		InOrderTravseral(BT->left);
 		cout << BT->Date << endl;
-		PreOrderTravseral(BT->right);
+		InOrderTravseral(BT->right);
 	}
 }
 void PostOrderTravseral(Bintree BT)
 {
 	if (BT)
 	{
-		PreOrderTravseral(BT->left);
-		PreOrderTravseral(BT->right);
+		PostOrderTravseral(BT->left);
+		PostOrderTravseral(BT->right);
 		cout << BT->Date << endl;
 	}
 }
@@ -80,7 +80,7 @@ void PostOrderTravseral(Bintree BT)
 //	}
 //}
 
-//±éÀú·ÇµÝ¹éËã·¨
+//éåŽ†éžé€’å½’ç®—æ³•
 void PreorderTravseral(Bintree BT)
 {
 	Bintree T = BT;
